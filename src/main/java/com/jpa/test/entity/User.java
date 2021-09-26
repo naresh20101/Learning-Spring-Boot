@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
@@ -47,6 +48,10 @@ public class User {
 		this.name = name;
 		this.city = city;
 		this.status = status;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", city=" + city + ", status=" + status + "]";
 	}
 	
 	
